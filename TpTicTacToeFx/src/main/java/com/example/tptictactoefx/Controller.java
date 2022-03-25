@@ -9,9 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 
 import java.util.Arrays;
@@ -30,6 +28,23 @@ public class Controller {
     private  Label winner;
     private GraphicsContext gc;
     private Game game;
+
+    @FXML
+    private  Label score_computer;
+    @FXML
+    private  Label score_human;
+    @FXML
+    private  Label total_round;
+    @FXML
+    private ColorPicker color_computer;
+    @FXML
+    private ColorPicker color_player;
+    @FXML
+    private TextField nameplayerone;
+    @FXML
+    private TextField nameplayertwo;
+    @FXML
+    private TextField sizeboard;
     public Controller(){
 
     }
