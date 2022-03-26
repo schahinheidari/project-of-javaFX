@@ -4,12 +4,15 @@
 <?import javafx.scene.canvas.Canvas?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml"
@@ -30,43 +33,52 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" onAction="#init" prefWidth="120.0" text="INIT" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#init" prefWidth="120.0" text="INIT" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#run" prefWidth="120.0" text="RUN" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+            <Button mnemonicParsing="false" onAction="#run" prefWidth="120.0" text="RUN" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP">
                <font>
                   <Font size="22.0" />
                </font>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#reset" prefWidth="120.0" text="RESET" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+            <Button mnemonicParsing="false" onAction="#reset" prefWidth="120.0" text="RESET" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP">
                <font>
                   <Font name="System Bold" size="22.0" />
                </font>
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
             </Button>
-            <Label text="Shahin" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+            <Label text="Shahin" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
                <GridPane.margin>
-                  <Insets top="10.0" />
+                  <Insets bottom="10.0" top="10.0" />
                </GridPane.margin>
             </Label>
-            <CheckBox fx:id="computer" mnemonicParsing="false" text="Computer" textFill="WHITE" GridPane.halignment="LEFT">
+            <CheckBox fx:id="computer" mnemonicParsing="false" text="Player 1" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="TOP">
                <font>
                   <Font size="14.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="20.0" />
+                  <Insets left="10.0" top="10.0" />
                </GridPane.margin>
             </CheckBox>
-            <CheckBox fx:id="human" mnemonicParsing="false" text="Human" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <CheckBox fx:id="human" mnemonicParsing="false" text="Player 2" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
                <font>
                   <Font size="14.0" />
                </font>
                <GridPane.margin>
-                  <Insets left="20.0" />
+                  <Insets left="10.0" top="10.0" />
                </GridPane.margin>
             </CheckBox>
             <ComboBox fx:id="level" prefWidth="120.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
@@ -83,7 +95,7 @@
                   <Insets top="20.0" />
                </GridPane.margin>
             </Label>
-            <Label text="----" textFill="#57f82f" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+            <Label fx:id="score_computer" text="----" textFill="#57f82f" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
@@ -91,7 +103,7 @@
                   <Insets bottom="10.0" right="20.0" />
                </GridPane.margin>
             </Label>
-            <Label text="----" textFill="#57f82f" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <Label fx:id="score_human" text="----" textFill="#57f82f" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
@@ -99,7 +111,7 @@
                   <Insets bottom="10.0" right="20.0" />
                </GridPane.margin>
             </Label>
-            <Label fx:id="score_computer" text="Score" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+            <Label text="Score" textFill="WHITE" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
@@ -107,7 +119,7 @@
                   <Insets bottom="10.0" left="10.0" />
                </GridPane.margin>
             </Label>
-            <Label fx:id="score_human" text="Score" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <Label text="Score" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
@@ -115,7 +127,7 @@
                   <Insets bottom="10.0" left="10.0" />
                </GridPane.margin>
             </Label>
-            <Label fx:id="round" text="Total round" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Label text="Total round" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
@@ -123,12 +135,67 @@
                   <Insets bottom="10.0" left="5.0" />
                </GridPane.margin>
             </Label>
-            <Label text="----" textFill="#57f82f" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+            <Label fx:id="total_round" text="----" textFill="#57f82f" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
                <GridPane.margin>
                   <Insets bottom="10.0" right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <ColorPicker fx:id="color_computer" prefWidth="30.0" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <value>
+                  <Color red="1.0" />
+               </value>
+            </ColorPicker>
+            <ColorPicker fx:id="color_player" prefWidth="30.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+               <value>
+                  <Color red="0.006382978521287441" blue="1.0" />
+               </value>
+            </ColorPicker>
+            <Label fx:id="score_computer1" text="Color" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="score_computer11" text="Color" textFill="WHITE" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="nameplayerone" maxWidth="100.0" promptText="inter name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="nameplayertwo" maxWidth="100.0" promptText="inter name" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="sizeboard" maxWidth="50.0" promptText="input" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets right="10.0" top="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Board size" textFill="WHITE" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets top="10.0" />
                </GridPane.margin>
             </Label>
          </children>

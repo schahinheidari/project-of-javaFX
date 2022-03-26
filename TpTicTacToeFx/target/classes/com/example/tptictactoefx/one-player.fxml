@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Group layoutX="2.0" layoutY="-1.0">
+         <children>
+            <Button fx:id="exitbtn" layoutX="450.0" layoutY="245.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="140.0" text="Exit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="Startbtnoneplayer" layoutX="450.0" layoutY="177.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="140.0" text="Start">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nameoneplayer" alignment="CENTER" layoutX="450.0" layoutY="53.0" prefHeight="50.0" prefWidth="140.0" promptText="enter your name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label fx:id="errorlbl" alignment="CENTER" layoutX="498.0" layoutY="332.0" text="Error" textFill="RED">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="400.0" fitWidth="443.0">
+               <image>
+                  <Image url="2.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
